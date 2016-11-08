@@ -1,0 +1,23 @@
+[catalog component html]
+
+<h2>Full Catalog Flosses</h2>
+
+<search (update)="filter($event)"></search> 
+<table>
+  <thead>
+    <tr>
+      <th width="200">DMC Code</th>
+      <th>Name</th>
+      <th width="150">Tile</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of currentView">
+      <td>{{f.dmc}}</td>
+      <td>{{f.name}}</td>
+      <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+      <td><a class="button add-button" (click)="addFloss(f, $event)">Add</a> <a class="success button add-button" (click)="wantFloss(f, $event)">Want</a></td>
+    </tr>
+  </tbody>
+</table>

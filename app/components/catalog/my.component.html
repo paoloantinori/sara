@@ -1,0 +1,22 @@
+[my component html]
+
+<h2>My Flosses</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">DMC Code</th>
+      <th>Name</th>
+      <th width="150">Tile</th>
+      <th width="150"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of catalog">
+      <td>{{f.dmc}}</td>
+      <td>{{f.name}}</td>
+      <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+      <td><a class="alert button add-button" (click)="deleteFloss(f, 'my', $event)">Delete</a></td>
+    </tr>
+  </tbody>
+</table>

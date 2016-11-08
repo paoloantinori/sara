@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { CatalogComponent, MyComponent, WantedComponent } from './components/catalog/catalog.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/catalog',
+    pathMatch: 'full'
+  },
+  {
+    path: 'catalog',
+    component: CatalogComponent
+  },
+  {
+    path: 'wanted',
+    component: WantedComponent
+  },
+  {
+    path: 'my',
+    component: MyComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+export const routedComponents = [ CatalogComponent ];
