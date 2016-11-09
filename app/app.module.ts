@@ -19,7 +19,7 @@ import { SearchComponent } from './components/search/search.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpModule,
+    HttpModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
   declarations: [

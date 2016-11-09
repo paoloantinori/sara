@@ -1,17 +1,7 @@
-"use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var catalog_service_1 = require('../../services/catalog.service');
-var CatalogComponent = (function () {
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CatalogService } from '../../services/catalog.service';
+export var CatalogComponent = (function () {
     function CatalogComponent(router, catalogService) {
         this.router = router;
         this.catalogService = catalogService;
@@ -48,18 +38,28 @@ var CatalogComponent = (function () {
     CatalogComponent.prototype.ngOnInit = function () {
         this.getCatalog();
     };
-    CatalogComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'catalog',
-            templateUrl: 'catalog.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, catalog_service_1.CatalogService])
-    ], CatalogComponent);
+    // onSelect(hero: Hero): void {
+    //   this.selectedHero = hero;
+    //   this.addingHero = false;
+    // }
+    // gotoDetail(): void {
+    //   this.router.navigate(['/detail', this.selectedHero.id]);
+    // }
+    CatalogComponent.decorators = [
+        { type: Component, args: [{
+                    moduleId: module.id,
+                    selector: 'catalog',
+                    templateUrl: 'catalog.component.html'
+                },] },
+    ];
+    /** @nocollapse */
+    CatalogComponent.ctorParameters = [
+        { type: Router, },
+        { type: CatalogService, },
+    ];
     return CatalogComponent;
 }());
-exports.CatalogComponent = CatalogComponent;
-var MyComponent = (function () {
+export var MyComponent = (function () {
     function MyComponent(router, catalogService) {
         this.router = router;
         this.catalogService = catalogService;
@@ -83,18 +83,28 @@ var MyComponent = (function () {
     MyComponent.prototype.ngOnInit = function () {
         this.getCatalog();
     };
-    MyComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'catalog',
-            templateUrl: 'my.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, catalog_service_1.CatalogService])
-    ], MyComponent);
+    // onSelect(hero: Hero): void {
+    //   this.selectedHero = hero;
+    //   this.addingHero = false;
+    // }
+    // gotoDetail(): void {
+    //   this.router.navigate(['/detail', this.selectedHero.id]);
+    // }
+    MyComponent.decorators = [
+        { type: Component, args: [{
+                    moduleId: module.id,
+                    selector: 'catalog',
+                    templateUrl: 'my.component.html'
+                },] },
+    ];
+    /** @nocollapse */
+    MyComponent.ctorParameters = [
+        { type: Router, },
+        { type: CatalogService, },
+    ];
     return MyComponent;
 }());
-exports.MyComponent = MyComponent;
-var WantedComponent = (function () {
+export var WantedComponent = (function () {
     function WantedComponent(router, catalogService) {
         this.router = router;
         this.catalogService = catalogService;
@@ -118,15 +128,25 @@ var WantedComponent = (function () {
     WantedComponent.prototype.ngOnInit = function () {
         this.getCatalog();
     };
-    WantedComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'catalog',
-            templateUrl: 'wanted.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, catalog_service_1.CatalogService])
-    ], WantedComponent);
+    // onSelect(hero: Hero): void {
+    //   this.selectedHero = hero;
+    //   this.addingHero = false;
+    // }
+    // gotoDetail(): void {
+    //   this.router.navigate(['/detail', this.selectedHero.id]);
+    // }
+    WantedComponent.decorators = [
+        { type: Component, args: [{
+                    moduleId: module.id,
+                    selector: 'catalog',
+                    templateUrl: 'wanted.component.html'
+                },] },
+    ];
+    /** @nocollapse */
+    WantedComponent.ctorParameters = [
+        { type: Router, },
+        { type: CatalogService, },
+    ];
     return WantedComponent;
 }());
-exports.WantedComponent = WantedComponent;
 //# sourceMappingURL=catalog.component.js.map

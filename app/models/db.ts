@@ -1,4 +1,6 @@
 
+import {Floss} from './floss';
+
 export class DB {
   public static db: Floss[] = [{
       "dmc":0,

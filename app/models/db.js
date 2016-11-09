@@ -1,5 +1,4 @@
-"use strict";
-var DB = (function () {
+export var DB = (function () {
     function DB() {
     }
     DB.db = [{
@@ -2885,5 +2884,4 @@ var DB = (function () {
     ];
     return DB;
 }());
-exports.DB = DB;
 //# sourceMappingURL=db.js.map
