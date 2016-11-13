@@ -74,6 +74,8 @@ var AppModuleInjector = (function (_super) {
             import34.CatalogComponentNgFactory,
             import34.WantedComponentNgFactory,
             import34.MyComponentNgFactory,
+            import34.CatalogComponentNgFactory,
+            import34.CatalogComponentNgFactory,
             import35.AppComponentNgFactory
         ], [import35.AppComponentNgFactory]);
     }
@@ -356,11 +358,6 @@ var AppModuleInjector = (function (_super) {
             if ((this.__ROUTES_41 == null)) {
                 (this.__ROUTES_41 = [[
                         {
-                            path: '',
-                            redirectTo: '/catalog',
-                            pathMatch: 'full'
-                        },
-                        {
                             path: 'catalog',
                             component: import43.CatalogComponent
                         },
@@ -371,6 +368,14 @@ var AppModuleInjector = (function (_super) {
                         {
                             path: 'my',
                             component: import43.MyComponent
+                        },
+                        {
+                            path: '',
+                            component: import43.CatalogComponent
+                        },
+                        {
+                            path: '**',
+                            component: import43.CatalogComponent
                         }
                     ]
                 ]);

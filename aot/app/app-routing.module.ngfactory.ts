@@ -47,7 +47,9 @@ class AppRoutingModuleInjector extends import0.NgModuleInjector<import1.AppRouti
     super(parent,[
       import9.CatalogComponentNgFactory,
       import9.WantedComponentNgFactory,
-      import9.MyComponentNgFactory
+      import9.MyComponentNgFactory,
+      import9.CatalogComponentNgFactory,
+      import9.CatalogComponentNgFactory
     ]
     ,([] as any[]));
   }
@@ -78,12 +80,6 @@ class AppRoutingModuleInjector extends import0.NgModuleInjector<import1.AppRouti
   get _ROUTES_9():any[] {
       if ((this.__ROUTES_9 == (null as any))) { (this.__ROUTES_9 = [[
         {
-          path: '',
-          redirectTo: '/catalog',
-          pathMatch: 'full'
-        }
-        ,
-        {
           path: 'catalog',
           component: import13.CatalogComponent
         }
@@ -96,6 +92,16 @@ class AppRoutingModuleInjector extends import0.NgModuleInjector<import1.AppRouti
         {
           path: 'my',
           component: import13.MyComponent
+        }
+        ,
+        {
+          path: '',
+          component: import13.CatalogComponent
+        }
+        ,
+        {
+          path: '**',
+          component: import13.CatalogComponent
         }
 
       ]

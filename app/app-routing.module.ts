@@ -5,11 +5,6 @@ import { CatalogComponent, MyComponent, WantedComponent } from './components/cat
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/catalog',
-    pathMatch: 'full'
-  },
-  {
     path: 'catalog',
     component: CatalogComponent
   },
@@ -20,7 +15,9 @@ const routes: Routes = [
   {
     path: 'my',
     component: MyComponent
-  }
+  },
+    { path: '', component: CatalogComponent },
+    { path: '**', component: CatalogComponent }
 ];
 
 @NgModule({

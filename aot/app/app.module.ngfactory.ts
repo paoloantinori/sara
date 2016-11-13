@@ -126,6 +126,8 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       import34.CatalogComponentNgFactory,
       import34.WantedComponentNgFactory,
       import34.MyComponentNgFactory,
+      import34.CatalogComponentNgFactory,
+      import34.CatalogComponentNgFactory,
       import35.AppComponentNgFactory
     ]
     ,[import35.AppComponentNgFactory]);
@@ -246,12 +248,6 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   get _ROUTES_41():any[] {
       if ((this.__ROUTES_41 == (null as any))) { (this.__ROUTES_41 = [[
         {
-          path: '',
-          redirectTo: '/catalog',
-          pathMatch: 'full'
-        }
-        ,
-        {
           path: 'catalog',
           component: import43.CatalogComponent
         }
@@ -264,6 +260,16 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
         {
           path: 'my',
           component: import43.MyComponent
+        }
+        ,
+        {
+          path: '',
+          component: import43.CatalogComponent
+        }
+        ,
+        {
+          path: '**',
+          component: import43.CatalogComponent
         }
 
       ]

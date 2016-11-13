@@ -3,11 +3,6 @@ import { RouterModule } from '@angular/router';
 import { CatalogComponent, MyComponent, WantedComponent } from './components/catalog/catalog.component';
 var routes = [
     {
-        path: '',
-        redirectTo: '/catalog',
-        pathMatch: 'full'
-    },
-    {
         path: 'catalog',
         component: CatalogComponent
     },
@@ -18,7 +13,9 @@ var routes = [
     {
         path: 'my',
         component: MyComponent
-    }
+    },
+    { path: '', component: CatalogComponent },
+    { path: '**', component: CatalogComponent }
 ];
 export var AppRoutingModule = (function () {
     function AppRoutingModule() {
