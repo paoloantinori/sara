@@ -1,12 +1,14 @@
 <!--catalog component-->
-<div class="content-padded">
+<div>
   <div class="bar bar-standard bar-header-secondary">
-    <h2>Full Catalog Flosses</h2>
+    <h2>Complete Catalog</h2>
     <search (update)="filter($event)"></search> 
   </div>
-  <ul class="table-view">
+  <ul class="content-padded table-view">
     <li class="table-view-cell"><span>DMC Code</span> | <span>Name</span> | <span>Tile</span></li>
-    <li class="table-view-divider">Divider</li>
+    <li class="table-view-divider">&nbsp;</li>
+    <li class="table-view-divider">&nbsp;</li>
+    <li class="table-view-divider">&nbsp;</li>
     <li *ngFor="let f of currentView" class="table-view-cell">
       <span>{{f.dmc}}</span> | 
       <span>{{f.name}}</span>
