@@ -1,22 +1,20 @@
 [Wanted component html]
+<div class="content-padded">
+  <div class="bar bar-standard bar-header-secondary">
+    <h2>Wanted Flosses</h2>
+  </div>
 
-<h2>Wanted Flosses</h2>
+  <ul class="table-view">
+    <li class="table-view-cell"><span>DMC Code</span> | <span>Name</span> | <span>Tile</span></li>
+    <li class="table-view-divider">Divider</li>
+    <li *ngFor="let f of catalog" class="table-view-cell">
+      <span>{{f.dmc}}</span> | 
+      <span>{{f.name}}</span> | 
+      <span class="pull-right">
+          <button class="btn btn-negative btn-outlined" (click)="deleteFloss(f, 'want', $event)">Delete <span class="icon icon-trash"></span></button>
+      </span>
+      <span id="tile" class="pull-right" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </li>
+  </ul>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th width="200">DMC Code</th>
-      <th>Name</th>
-      <th width="150">Tile</th>
-      <th width="150"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let f of catalog">
-      <td>{{f.dmc}}</td>
-      <td>{{f.name}}</td>
-      <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-      <td><button class="btn btn-negative btn-outlined" (click)="deleteFloss(f, 'want', $event)">Delete <span class="icon icon-trash"></span></button></td>
-    </tr>
-  </tbody>
-</table>

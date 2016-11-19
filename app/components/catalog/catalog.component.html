@@ -1,26 +1,22 @@
 [catalog component html]
+<div class="content-padded">
+  <div class="bar bar-standard bar-header-secondary">
+    <h2>Full Catalog Flosses</h2>
+  </div>
+    <search (update)="filter($event)"></search> 
+  <ul class="table-view">
+    <li class="table-view-cell"><span>DMC Code</span> | <span>Name</span> | <span>Tile</span></li>
+    <li class="table-view-divider">Divider</li>
+    <li *ngFor="let f of currentView" class="table-view-cell">
+      <span>{{f.dmc}}</span> | 
+      <span>{{f.name}}</span> | 
+      <span class="pull-right">
+          <button class="btn btn-positive btn-outlined" (click)="addFloss(f, $event)">Add <span class="icon icon-check"></span></button>
+          <button class="btn btn-primary btn-outlined" (click)="wantFloss(f, $event)">Want <span class="icon icon-star"></span></button>
+      </span>
+      <span id="tile" class="pull-right" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </li>
+  </ul>
 
-<h2>Full Catalog Flosses</h2>
+</div>
 
-<search (update)="filter($event)"></search> 
-<table>
-  <thead>
-    <tr>
-      <th width="200">DMC Code</th>
-      <th>Name</th>
-      <th width="150">Tile</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let f of currentView">
-      <td>{{f.dmc}}</td>
-      <td>{{f.name}}</td>
-      <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-      <td>
-        <button class="btn btn-positive btn-outlined" (click)="addFloss(f, $event)">Add <span class="icon icon-check"></span></button>
-        <button class="btn btn-primary btn-outlined" (click)="wantFloss(f, $event)">Want <span class="icon icon-star"></span></button>
-      </td>  
-    </tr>
-  </tbody>
-</table>
