@@ -8,8 +8,8 @@
     <li class="table-view-cell"><span>DMC Code</span> | <span>Name</span> | <span>Tile</span></li>
     <li class="table-view-divider">Divider</li>
     <li *ngFor="let f of catalog" class="table-view-cell">
-      <span>{{f.dmc}}</span> | 
-      <span>{{f.name}}</span> | 
+      <span id="dmc" class="pull-left">{{f.dmc}}</span> | 
+      <span>{{f.name}}</span>
       <span class="pull-right">
         <span id="tile" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <button class="btn btn-negative" (click)="deleteFloss(f, 'want', $event)">Delete <span class="icon icon-trash"></span></button>

@@ -10,13 +10,13 @@
     <li class="table-view-divider">&nbsp;</li>
     <li class="table-view-divider">&nbsp;</li>
     <li *ngFor="let f of currentView" class="table-view-cell">
-      <span>{{f.dmc}}</span> | 
+      <span id="dmc" class="pull-left">{{f.dmc}}</span> | 
       <span>{{f.name}}</span>
-      <span class="pull-right">
+      <div class="pull-right">
           <span id="tile" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <button class="btn btn-positive" (click)="addFloss(f, $event)" [class.btn-outlined]="isFlossIn(f, 'my')"><span class="icon icon-check"></span></button>
           <button class="btn btn-primary" (click)="wantFloss(f, $event)" [class.btn-outlined]="isFlossIn(f, 'want')"><span class="icon icon-star"></span></button>
-      </span>
+      </div>
       
     </li>
   </ul>
