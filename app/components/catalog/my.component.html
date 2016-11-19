@@ -16,7 +16,7 @@
       <td>{{f.dmc}}</td>
       <td>{{f.name}}</td>
       <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-      <td><a class="alert button add-button" (click)="deleteFloss(f, 'my', $event)">Delete</a></td>
+      <td><button class="btn btn-negative btn-outlined" (click)="deleteFloss(f, 'my', $event)">Delete <span class="icon icon-trash"></span></button></td>
     </tr>
   </tbody>
 </table>

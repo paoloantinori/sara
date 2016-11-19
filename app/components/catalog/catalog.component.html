@@ -17,7 +17,10 @@
       <td>{{f.dmc}}</td>
       <td>{{f.name}}</td>
       <td><span [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-      <td><a class="button add-button" (click)="addFloss(f, $event)">Add</a> <a class="success button add-button" (click)="wantFloss(f, $event)">Want</a></td>
+      <td>
+        <button class="btn btn-positive btn-outlined" (click)="addFloss(f, $event)">Add <span class="icon icon-check"></span></button>
+        <button class="btn btn-primary btn-outlined" (click)="wantFloss(f, $event)">Want <span class="icon icon-star"></span></button>
+      </td>  
     </tr>
   </tbody>
 </table>
