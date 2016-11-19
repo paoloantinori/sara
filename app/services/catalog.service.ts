@@ -43,6 +43,15 @@ export class CatalogService {
     this.store(group, collection);
   }
 
+  isFlossIn(floss: Floss, group: string) : boolean {
+    var collection : Floss[] = this.load(group);
+    if(!collection){
+      collection = [];
+    }
+    let found : Floss = collection.find(value => value.dmc === floss.dmc);
+    return found ? true : false; 
+  }
+
   store(name: string, data: any): void {
     let localData: any = localStorage.getItem('sara');
     if (localData) {

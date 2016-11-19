@@ -44,6 +44,9 @@ export class CatalogComponent implements OnInit {
   wantFloss(floss: Floss, event: any): void {
     this.catalogService.addFlossTo(floss, 'want');
   }
+  isFlossIn(floss: Floss, group: string) : boolean {
+    return this.catalogService.isFlossIn(floss, group);
+  }
   ngOnInit(): void {
     this.getCatalog();
   }

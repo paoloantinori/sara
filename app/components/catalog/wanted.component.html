@@ -1,4 +1,4 @@
-[Wanted component html]
+<!--wanted component-->
 <div class="content-padded">
   <div class="bar bar-standard bar-header-secondary">
     <h2>Wanted Flosses</h2>
@@ -11,9 +11,10 @@
       <span>{{f.dmc}}</span> | 
       <span>{{f.name}}</span> | 
       <span class="pull-right">
-          <button class="btn btn-negative btn-outlined" (click)="deleteFloss(f, 'want', $event)">Delete <span class="icon icon-trash"></span></button>
+        <span id="tile" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <button class="btn btn-negative" (click)="deleteFloss(f, 'want', $event)">Delete <span class="icon icon-trash"></span></button>
       </span>
-      <span id="tile" class="pull-right" [style.background-color]="'#' + f.rgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      
     </li>
   </ul>
 </div>
