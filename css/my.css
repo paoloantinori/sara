@@ -1,3 +1,5 @@
 #tile {
     border-color: #000;
+    border-style: solid;
+    margin-right: 2em;
 }

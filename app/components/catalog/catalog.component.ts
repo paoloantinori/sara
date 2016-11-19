@@ -23,7 +23,7 @@ export class CatalogComponent implements OnInit {
   filter(term: string){
     console.log("__" + term);
     if(term.trim().length > 0){
-      this.currentView = this.catalog.filter(floss => floss.name.indexOf(term) >= 0);
+      this.currentView = this.catalog.filter(floss => floss.name.toLowerCase().indexOf(term.toLowerCase()) >= 0);
     } else {
       this.currentView = this.catalog;
     }
@@ -44,26 +44,9 @@ export class CatalogComponent implements OnInit {
   wantFloss(floss: Floss, event: any): void {
     this.catalogService.addFlossTo(floss, 'want');
   }
-
-  // close(savedHero: Hero): void {
-  //   this.addingHero = false;
-  //   if (savedHero) { this.getHeroes(); }
-  // }
-
-
-
   ngOnInit(): void {
     this.getCatalog();
   }
-
-  // onSelect(hero: Hero): void {
-  //   this.selectedHero = hero;
-  //   this.addingHero = false;
-  // }
-
-  // gotoDetail(): void {
-  //   this.router.navigate(['/detail', this.selectedHero.id]);
-  // }
 }
 
 
